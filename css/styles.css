@@ -1,13 +1,21 @@
+
 body {
     font-family: Arial, sans-serif;
     margin:0;padding:0;
     line-height:1.6;
 }
+
+/* Estilos para el encabezado */
 header {
     background:#000;
     color:#fff;
     padding:10px 0;
 }
+
+/* Estilos para la barra de navegación */
+/* Utiliza flexbox para una disposición horizontal */
+/* Alinea los elementos al centro y distribuye el espacio uniformemente */
+/* El ancho de la barra de navegación es del 90% del contenedor principal */
 .navbar {
     display:flex;
     justify-content:space-between;
@@ -15,16 +23,29 @@ header {
     width:90%;
     margin:auto;
 }
+
+/* Estilos para el logo */
+/* El logo es una imagen con un tamaño fijo */
+/* Asegura que el logo no se distorsione al cambiar el tamaño de la pantalla */
 .navbar .logo img {
     height:60px;
 }
+
+/* Estilos para la lista de navegación */
+/* Utiliza flexbox para una disposición horizontal */
+/* Elimina el estilo de lista por defecto */
+/* Los enlaces de navegación son flexibles y tienen un espaciado uniforme */
 .nav-links {
     list-style:none;
     display:flex;
 }
+
+/* Estilos para los elementos de la lista de navegación */
 .nav-links li {
     margin:0 15px;
 }
+
+/* Estilos para los enlaces de navegación */
 .nav-links a {
     color:#fff;
     text-decoration:none;
@@ -32,23 +53,38 @@ header {
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     font-size: 20px;
 }
+
+/* Estilo para el enlace activo */
 .nav-links a.active {
     color:#ffcc00;
 }
+
+/* Estilos para el menú móvil */
+/* Oculta el menú por defecto en pantallas pequeñas */
+/* Muestra el menú al hacer clic en el icono de menú */
 .menu-toggle {
     display:none;
     font-size:28px;
     cursor:pointer;
     color:#fff;
 }
+
+/* Estilos para el hero principal */
+/* Utiliza un fondo claro y centrado */
+/* El título del hero es grande y centrado */
+/* La imagen del hero es responsiva y tiene un efecto de sombra */
 .hero {
     text-align:center;
     padding:50px;
     background:#f4f4f4;
 }
+
+/* Título del hero */
 .hero h1 {
     margin-bottom:20px;
 }
+
+/* Imagen del hero */
 .btn {
     display:inline-block;
     padding:10px 20px;
@@ -57,16 +93,28 @@ header {
     text-decoration:none;
     border-radius:5px;
 }
+
+/* Estilos para el contenido principal */
+/* Utiliza un ancho máximo para el contenido */
+/* Centra el contenido en la página */
 .content {
     width:80%;
     margin:auto;
     padding:20px;
 }
+
+/* Estilos para la cuadrícula de productos */
+/* Utiliza grid para una disposición flexible */
+/* Cada tarjeta de producto se adapta al tamaño del contenedor */
+/* Las tarjetas se distribuyen uniformemente con un espacio entre ellas */
+/* La cuadrícula se ajusta automáticamente al tamaño de la pantalla */
 .product-grid {
     display:grid;
     grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));
     gap:20px;
 }
+
+/* Tarjeta de producto */
 .product-card {
     border:1px solid #ddd;
     padding:10px;
@@ -74,10 +122,14 @@ header {
     border-radius:8px;
     background:#fff;
 }
+
+/* Imagen dentro de la tarjeta de producto */
 .product-card img {
     width:100%;
     border-radius:8px;
 }
+
+/* Botón de "Agregar al carrito" */
 footer {
     text-align:center;
     padding:20px;
@@ -85,11 +137,15 @@ footer {
     color:#fff;
     margin-top:20px;
 }
+
+/* Redes sociales */
 .social a {
     color:#ffcc00;
     text-decoration:none;
     margin:0 5px;
 }
+
+/* Estilos responsivos */
 @media(max-width:768px){
     .nav-links {
         display:none;
@@ -110,6 +166,8 @@ footer {
         display:flex;
     }
 }
+
+/* Hero principal */
 .hero-image {
     display: flex;
     justify-content: center;
@@ -117,6 +175,7 @@ footer {
     margin-top: 5px;
 }
 
+/* Imagen dentro del hero */
 .hero-image img {
     max-width: 50%;
     height: auto;
@@ -162,6 +221,7 @@ footer {
     transition: 0.3s;
 }
 
+/* Botón de "Agregar al carrito" - hover */
 .product-card .add-to-cart:hover {
     background-color: #a93226;
 }
@@ -175,6 +235,7 @@ footer {
     margin-top: 10px;
 }
 
+/* Controles de cantidad - botones */
 .quantity-control button {
     background-color: #2980b9;
     color: white;
@@ -184,16 +245,19 @@ footer {
     cursor: pointer;
 }
 
+/* Controles de cantidad - hover */
 .quantity-control button:hover {
     background-color: #1f5f8a;
 }
 
+/* Controles de cantidad - span */
 .quantity-control span {
     min-width: 25px;
     display: inline-block;
     text-align: center;
     font-weight: bold;
 }
+
 
 /* Hero especial para la página Acerca de */
 .hero.about-hero {
@@ -208,6 +272,7 @@ footer {
     
 }
 
+/* Overlay oscuro para el hero de la página Acerca de */
 .hero.about-hero::after {
     content: "";
     position: absolute;
@@ -216,6 +281,8 @@ footer {
     background: rgba(0,0,0,0.5);
     
 }
+
+/* Título dentro del hero de la página Acerca de */
 .hero.about-hero h1 {
     position: relative;
     z-index: 1;
@@ -230,6 +297,8 @@ footer {
     margin: 50px auto;
     width: 80%;
 }
+
+/* Timeline item */
 .timeline-item {
     background: #dcc976;
     padding: 20px;
@@ -242,10 +311,12 @@ footer {
     font-family:Verdana, Geneva, Tahoma, sans-serif;
     font-size: 20px;
 }
+
 /* Timeline item heading */
 .timeline-item h2 {
     color: #935806;
 }
+
 /* Timeline item contenido si opacity es 0 no sale el contenido */
 .timeline-item.visible {
     opacity: 1;
