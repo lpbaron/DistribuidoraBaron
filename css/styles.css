@@ -261,7 +261,7 @@ footer {
 
 /* Hero especial para la página Acerca de */
 .hero.about-hero {
-    background: url("/img/banner-historia.png") center/cover no-repeat;
+    background: url("../img/banner-historia.png") center/cover no-repeat;
     height: 240px;
     display: flex;
     align-items: center;
