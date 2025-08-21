@@ -1,0 +1,325 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin:0;padding:0;
+    line-height:1.6;
+}
+
+/* Estilos para el encabezado */
+header {
+    background:#000;
+    color:#fff;
+    padding:10px 0;
+}
+
+/* Estilos para la barra de navegación */
+/* Utiliza flexbox para una disposición horizontal */
+/* Alinea los elementos al centro y distribuye el espacio uniformemente */
+/* El ancho de la barra de navegación es del 90% del contenedor principal */
+.navbar {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    width:90%;
+    margin:auto;
+}
+
+/* Estilos para el logo */
+/* El logo es una imagen con un tamaño fijo */
+/* Asegura que el logo no se distorsione al cambiar el tamaño de la pantalla */
+.navbar .logo img {
+    height:60px;
+}
+
+/* Estilos para la lista de navegación */
+/* Utiliza flexbox para una disposición horizontal */
+/* Elimina el estilo de lista por defecto */
+/* Los enlaces de navegación son flexibles y tienen un espaciado uniforme */
+.nav-links {
+    list-style:none;
+    display:flex;
+}
+
+/* Estilos para los elementos de la lista de navegación */
+.nav-links li {
+    margin:0 15px;
+}
+
+/* Estilos para los enlaces de navegación */
+.nav-links a {
+    color:#fff;
+    text-decoration:none;
+    font-weight:bold;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+}
+
+/* Estilo para el enlace activo */
+.nav-links a.active {
+    color:#ffcc00;
+}
+
+/* Estilos para el menú móvil */
+/* Oculta el menú por defecto en pantallas pequeñas */
+/* Muestra el menú al hacer clic en el icono de menú */
+.menu-toggle {
+    display:none;
+    font-size:28px;
+    cursor:pointer;
+    color:#fff;
+}
+
+/* Estilos para el hero principal */
+/* Utiliza un fondo claro y centrado */
+/* El título del hero es grande y centrado */
+/* La imagen del hero es responsiva y tiene un efecto de sombra */
+.hero {
+    text-align:center;
+    padding:50px;
+    background:#f4f4f4;
+}
+
+/* Título del hero */
+.hero h1 {
+    margin-bottom:20px;
+}
+
+/* Imagen del hero */
+.btn {
+    display:inline-block;
+    padding:10px 20px;
+    background:#ffcc00;
+    color:#000;
+    text-decoration:none;
+    border-radius:5px;
+}
+
+/* Estilos para el contenido principal */
+/* Utiliza un ancho máximo para el contenido */
+/* Centra el contenido en la página */
+.content {
+    width:80%;
+    margin:auto;
+    padding:20px;
+}
+
+/* Estilos para la cuadrícula de productos */
+/* Utiliza grid para una disposición flexible */
+/* Cada tarjeta de producto se adapta al tamaño del contenedor */
+/* Las tarjetas se distribuyen uniformemente con un espacio entre ellas */
+/* La cuadrícula se ajusta automáticamente al tamaño de la pantalla */
+.product-grid {
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(200px, 1fr));
+    gap:20px;
+}
+
+/* Tarjeta de producto */
+.product-card {
+    border:1px solid #ddd;
+    padding:10px;
+    text-align:center;
+    border-radius:8px;
+    background:#fff;
+}
+
+/* Imagen dentro de la tarjeta de producto */
+.product-card img {
+    width:100%;
+    border-radius:8px;
+}
+
+/* Botón de "Agregar al carrito" */
+footer {
+    text-align:center;
+    padding:20px;
+    background:#000;
+    color:#fff;
+    margin-top:20px;
+}
+
+/* Redes sociales */
+.social a {
+    color:#ffcc00;
+    text-decoration:none;
+    margin:0 5px;
+}
+
+/* Estilos responsivos */
+@media(max-width:768px){
+    .nav-links {
+        display:none;
+        flex-direction:column;
+        width:100%;
+        background:#000;
+        position:absolute;
+        top:20px;
+        left:0;
+    }
+    .nav-links li {
+        margin:15px 0;
+    }
+    .menu-toggle {
+        display:block;
+    }
+    .nav-links.active {
+        display:flex;
+    }
+}
+
+/* Hero principal */
+.hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+}
+
+/* Imagen dentro del hero */
+.hero-image img {
+    max-width: 50%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.5);
+
+    /* Animación */
+    opacity: 0;
+    transform: scale(0.8);
+    animation: fadeZoomIn 1.5s ease-out forwards;
+}
+
+/* Definición de animación */
+@keyframes fadeZoomIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Tarjeta de producto */
+.product-card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Botón de "Agregar al carrito" */
+.product-card .add-to-cart {
+    margin-top: 10px;
+    padding: 8px 12px;
+    border: none;
+    background-color: #c0392b;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+/* Botón de "Agregar al carrito" - hover */
+.product-card .add-to-cart:hover {
+    background-color: #a93226;
+}
+
+/* Controles de cantidad */
+.quantity-control {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+/* Controles de cantidad - botones */
+.quantity-control button {
+    background-color: #2980b9;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Controles de cantidad - hover */
+.quantity-control button:hover {
+    background-color: #1f5f8a;
+}
+
+/* Controles de cantidad - span */
+.quantity-control span {
+    min-width: 25px;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+/* Hero especial para la página Acerca de */
+.hero.about-hero {
+    background: url("/img/banner-historia.png") center/cover no-repeat;
+    height: 240px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #ba8b40;
+    position: relative;
+    
+}
+
+/* Overlay oscuro para el hero de la página Acerca de */
+.hero.about-hero::after {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5);
+    
+}
+
+/* Título dentro del hero de la página Acerca de */
+.hero.about-hero h1 {
+    position: relative;
+    z-index: 1;
+    font-size: 2.5rem;
+    color: #573504;
+}
+
+/* Timeline */
+.timeline {
+    display: grid;
+    gap: 40px;
+    margin: 50px auto;
+    width: 80%;
+}
+
+/* Timeline item */
+.timeline-item {
+    background: #dcc976;
+    padding: 20px;
+    border-left: 4px solid #9c6c1a;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    border-radius: 6px;
+    opacity: 1;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+}
+
+/* Timeline item heading */
+.timeline-item h2 {
+    color: #935806;
+}
+
+/* Timeline item contenido si opacity es 0 no sale el contenido */
+.timeline-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
