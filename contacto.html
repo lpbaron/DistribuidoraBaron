@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+  <!-- Meta y título -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contáctenos - Distribuidora Barón</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+      <!-- Navegación principal -->
+        <nav class="navbar">
+            <div class="logo"><img src="img/logo.png" alt="Distribuidora Barón"></div>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="acerca.html">Acerca de</a></li>
+                <li><a href="contacto.html" class="active">Contáctenos</a></li>
+            </ul>
+            <div class="menu-toggle" id="menu-toggle">&#9776;</div>
+        </nav>
+    </header>
+   <main class="content" style="font-family: Arial, sans-serif; padding: 40px;">
+    <!-- Título principal -->  
+    <h1 style="text-align: center; margin-bottom: 30px; color: #8B0000;">Contáctenos</h1>
+  
+  <div class="form-container" style="display: flex; align-items: center; justify-content: center; gap: 40px; max-width: 900px; margin: 0 auto;">
+    
+    <!-- Formulario reducido -->
+    <div class="form-background" style="flex: 1; max-width: 380px; background: #f9f9f9; padding: 25px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+      <form id="contact-form" class="form-overlay" novalidate>
+        <label for="name" style="display:block; margin-bottom: 6px; font-weight: bold;">Nombre</label>
+          <input type="text" id="name" name="name" placeholder="Ingrese su nombre" 
+               autocomplete="name" required
+               style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 8px; font-size: 15px;">
+        <label for="email" style="display:block; margin-bottom: 6px; font-weight: bold;">Correo</label>
+          <input type="email" id="email" name="email" placeholder="ejemplo@correo.com" 
+               autocomplete="email" required
+               style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 8px; font-size: 15px;">
+        <label for="message" style="display:block; margin-bottom: 6px; font-weight: bold;">Mensaje</label>
+          <textarea id="message" name="message" rows="4" placeholder="Escriba su mensaje aquí..." required
+               style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 8px; font-size: 15px; resize: none;"></textarea>
+        <button type="submit" class="btn"
+                style="width: 100%; padding: 12px; background-color: #8B0000; color: #fff; border: none; border-radius: 8px; font-size: 15px; font-weight: bold; cursor: pointer; transition: background 0.3s;">
+          Enviar
+        </button>
+      </form>
+    </div>
+
+    <!-- Imagen -->
+    <div class="form-image" style="flex: 1; max-width: 500px; text-align: center;">
+      <img src="img/contactenos.png" alt="Distribuidora Barón - Tu pasaporte al sabor" 
+           style="width: 100%; height: auto; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.2);">
+    </div>
+    
+  </div>
+  </main>
+  <!-- Footer -->
+    <footer>
+        <p>© 2025 Distribuidora Barón</p>
+        <div class="social">
+            <a href="https://facebook.com" target="_blank">Facebook</a> |
+            <a href="https://instagram.com" target="_blank">Instagram</a>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
